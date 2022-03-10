@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: helloworldjob
+spec:
+  ttlSecondsAfterFinished: 10
+  template:
+    spec:
+      containers:
+      - name: helloworld
+        image: ragatzino/helloworld
+        ## L'image helloworld est un jdk avec un jar disponible à ./application.jar
+        command: ["java",  "-jar", "application.jar"]
+      restartPolicy: Never
