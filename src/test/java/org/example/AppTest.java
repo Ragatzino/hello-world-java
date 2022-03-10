@@ -1,4 +1,4 @@
-package com.mkyong.core.utils;
+package org.example;
 
 import static org.junit.Assert.assertTrue;
 
